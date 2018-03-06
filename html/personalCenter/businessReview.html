@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>商机审核</title>
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/personalCenterLess/businessReview.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="wrap">
+            <!-- CRM终端顶部 -->
+            <div class="wrap-top">
+                <div class="fr">
+                    <div class='input-search fl'>
+                        <input class="nameSel" type="text" placeholder="商机名称、客户名称、负责人姓名">
+                        <i class=input-search1></i>
+                    </div>
+                    <div class="advanced-filter fl"></div>
+                </div>
+            </div>
+            <!-- CRM终端table区 -->
+            <div class="wrap-table clearfix">
+                <div class="layui-form">
+                    <table class="layui-table">
+                        <colgroup>
+                            <!--<col width="2%">-->
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="10%">
+                            <col width="11%">
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="13%">
+                            <col width="12%">
+                            <col width="6%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <!--<th>-->
+                                <!--<div class="layui-form-checkbox layui-unselect all" lay-skin="primary"><i class="layui-icon"></i></div>-->
+                            <!--</th>-->
+                            <th>商机名称</th>
+                            <th>商机状态</th>
+                            <th>客户名称</th>
+                            <th>预算状态</th>
+                            <th>合同金额（预计）</th>
+                            <th>商机等级</th>
+                            <th>来源类型</th>
+                            <th>商机负责人</th>
+                            <th>签约时间（预计）</th>
+                            <th>审核状态</th>
+                            <th class="btn1">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody class="all-control">
+                        <tr>
+                            <!--<td>-->
+                                <!--<div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i class="layui-icon"></i></div>-->
+                            <!--</td>-->
+                            <td>测试</td>
+                            <td>测试</td>
+                            <td>北京农业水产科学研究院1515</td>
+                            <td>申请中（非主导）</td>
+                            <td>500万</td>
+                            <td>A类</td>
+                            <td>转移、共享</td>
+                            <td>阿涛、阿丽</td>
+                            <td>2017-09-18</td>
+                            <td>审核未通过（主管）</td>
+                            <td>审核</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pager" id='pager'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 筛选弹出层 -->
+<div id="filter" style="display: none">
+    <ul class="clearfix">
+        <li>
+            <div>
+                <label>商机类别 :</label>
+            </div>
+            <div>
+                <select class="businesstype">
+                    <option value="0">请选择</option>
+                </select>
+                <!--<span><img src="../../img/xiala.png">  </span>-->
+            </div>
+        </li>
+        <li>
+            <div>
+                <label>商机状态 :</label>
+            </div>
+            <div>
+                <select class="projectstate">
+                    <option value="0">请选择</option>
+                </select>
+                <!--<span><img src="../../img/xiala.png">  </span>-->
+            </div>
+        </li>
+        <li>
+            <div>
+                <label>商机等级 :</label>
+            </div>
+            <div>
+                <select class="projectlevel">
+                    <option value="0">请选择</option>
+                </select>
+                <!--<span><img src="../../img/xiala.png">  </span>-->
+            </div>
+        </li>
+        <li>
+            <div>
+                <label>签约金额(预计) :</label><input class="beginbudgetmoney" type="text"> - <input class="endbudgetmoney" type="text">
+            </div>
+        </li>
+        <li>
+            <div>
+                <label>预算状态 :</label>
+            </div>
+            <div>
+                <select class="budgetstatus">
+                    <option value="0">请选择</option>
+                </select>
+                <!--<span><img src="../../img/xiala.png">  </span>-->
+            </div>
+        </li>
+    </ul>
+    <p class="footer" style="margin-top: 20px">
+        <input type="button" value="重置" class="act">
+        <input type="button" value="确定" class="agr">
+    </p>
+</div>
+
+<!-- 审核弹出层 -->
+<div id="busReview" style="display: none">
+    <div>
+        <span class="title">审核结果：</span>
+        <input type="radio" class="radioCheck" name="choose" value="1">
+        <span>同意</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="choose" value="0">
+        <span>拒绝</span>
+        <img src="../../img/stars.png">
+    </div>
+    <div class="isLeader">
+        <span class="title">执行人：</span>
+        <input class="zxr" type="text"> <img src="../../img/stars.png">
+        <ul class="chooseZxr">
+            <li>张传雷</li>
+            <li>杨羽珂</li>
+            <li>杜万福</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+            <li>哈哈哈</li>
+        </ul>
+    </div>
+    <div>
+        <span class="title">商机等级：</span>
+        <select class="tcbuslevel">
+            <option value="0">A级</option>
+            <option value="0">B级</option>
+            <option value="0">C级</option>
+            <option value="0">D级</option>
+            <option value="0">E级</option>
+        </select>
+    </div>
+    <div class="clearfix">
+        <span class="title fl">审核内容：</span>
+        <textarea class="auditContent"></textarea><img src="../../img/stars.png">
+    </div>
+    <div class="footer">
+        <input type="button" value="取消" class="cancel">
+        <input type="button" value="确定" class="isOk">
+    </div>
+</div>
+
+</body>
+<script src="../../js/personalCenter/businessReview.js"></script>
+</html>
+
+
+

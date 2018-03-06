@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>首页</title>
+    <link rel="stylesheet" href="../../css/indexLess/index.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main clearfix'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="pr">
+            <div class="fl left-box">
+                <div class="box">
+                    <div class="header">
+                        <p id="userName"></p>
+                        <div class="input-box">
+                            <div id="findXiaShu" class="select-box" li-value="-1" style="min-width: 150px;">
+                                <span class="text">请选择下属</span>
+                                <ul class="dropdown"></ul>
+                            </div>
+                            <div style="width: 10px;height: 10px;display: inline-block;"></div>
+                            <div id="selectdate" class="select-box" >
+                                <span class="text">请选择时间</span>
+                                <ul class="dropdown"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistical">
+                        <ul id="">
+                            <li>
+                                <p>新增客户</p>
+                                <p><span>&nbsp;</span></p>
+                            </li>
+                            <li>
+                                <p>新增联系人</p>
+                                <p><span>&nbsp;</span></p>
+                            </li>
+                            <li>
+                                <p>新增商机</p>
+                                <p><span>&nbsp;</span></p>
+                            </li>
+                            <li>
+                                <p>跟进记录</p>
+                                <p><span>&nbsp;</span></p>
+                            </li>
+                            <li>
+                                <p>日报</p>
+                                <p><span>&nbsp;</span></p>
+                            </li>
+                            <li>
+                                <p>周报</p>
+                                <p><span>&nbsp;</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="header">
+                        <p>团队新增数据情况</p>
+                        <div class="input-box">
+                            <div id="teamyb" class="select-box" style="min-width: 120px;" li-value="1">
+                                <span class="text">近一年</span>
+                                <ul class="dropdown">
+                                    <li li-value="1">近一年</li>
+                                    <li li-value="0">近半年</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="echarts" id="echart1">
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="header">
+                        <p>团队跟进客户趋势</p>
+                        <div class="input-box">
+                            <div id="trendyb" class="select-box" style="width: 120px;" li-value="1">
+                                <span class="text">近一年</span>
+                                <ul class="dropdown">
+                                    <li li-value="1">近一年</li>
+                                    <li li-value="0">近半年</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="echarts" id="echart2">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="fr right-box" id="workLst">
+                <div class="header">
+                    <p>工作圈</p>
+                </div>
+                <div class="tab">
+                    <ul>
+                        <li class="active" li-value="0">全部动态</li>
+                        <li li-value="1">客户相关</li>
+                        <li li-value="2">日志相关</li>
+                        <li li-value="3">商机相关</li>
+                    </ul>
+                </div>
+                <div class="tab_con">
+
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../resource/echarts.min.js"></script>
+<script src="../../js/index/index.js"></script>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>战略合作</title>
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/strategicCooperationLess/index.css">
+</head>
+
+<body>
+    <!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script> <header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+    <div class='main'>
+        <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+        <div class="content clearfix">
+            <div class="wrap">
+                <!-- CRM终端顶部 -->
+                <div class="wrap-top">
+                    <ol class='fl'>
+                        <li class="nav-btn">新建合作</li>
+                        <li class="nav-btn">导出全部</li>
+                    </ol>
+                    <div class="fr">
+                        <div class='input-search fl'>
+                            <input type="text" placeholder="公司名称、跟进人姓名">
+                            <i class="input-search"></i>
+                        </div>
+                        <div class="advanced-filter fl"></div>
+                    </div>
+                </div>
+                <!-- CRM终端table区 -->
+                <div class="wrap-table clearfix">
+                    <div class="layui-form">
+                        <table class="layui-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="layui-form-checkbox layui-unselect all" lay-skin="primary">
+                                            <i class="layui-icon"></i>
+                                        </div>
+                                    </th>
+                                    <th>序号</th>
+                                    <th>协议编号</th>
+                                    <th>公司名称</th>
+                                    <th>是否上市</th>
+                                    <th>客户类型</th>
+                                    <th>客户状态</th>
+                                    <th>跟进人</th>
+                                    <th>联系人</th>
+                                    <th>进度</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="all-control">
+                            </tbody>
+                        </table>
+                        <div class="pager" id='pager'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="div4" style="display: none;">
+        <ul class="clearfix">
+            <li>
+                <div>
+                    <label>客户类型：</label>
+                </div>
+                <div>
+                    <select class="company-type">
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>客户状态：</label>
+                </div>
+                <div>
+                    <select class="company-status">
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>是否上市：</label>
+                </div>
+                <div>
+                    <select class="select-has-IPO">
+                        <option>请选择</option>
+                        <option value="1">是</option>
+                        <option value="2">否</option>
+                    </select>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <script src='../../js/opportunityManagement/module.js'></script>
+    <script src='../../js/strategicCooperation/index.js'></script>
+</body>
+
+</html>

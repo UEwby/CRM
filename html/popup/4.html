@@ -1,0 +1,68 @@
+<div id="fancybox" class="fancybox" style="display: none;">
+    <div class="ceng"></div>
+    <div class="fancybox-wrap">
+        <h4 class="fancybox-title">
+            <button class="close">&times;</button>
+            <span id="head"></span>
+        </h4>
+        <div class="body" id="body">
+            <div class="layui-form layui-form-ext2" >
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <div class="select-box-wrap">
+                            <span class="layui-form-label">角色类型：</span>
+                            <div id="addUroleType" class="select-box" li-value="1" style="width: 305px;">
+                                <span class="text">超级管理员</span>
+                                <ul class="dropdown roletype"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">姓名：</label>
+                    <div class="layui-input-block">
+                        <input id="usernamezh" type="text" name="" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">账号：</label>
+                    <div class="layui-input-block">
+                        <input id="usernameen" type="text" name="" required  lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <div class="select-box-wrap">
+                            <span class="layui-form-label">周报类型：</span>
+                            <div id="addUweeklyTRype" class="select-box" style="width: 305px;">
+                                <span class="text">不限</span>
+                                <ul class="dropdown weeklyTRype"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button id="btn_addU" class="layui-btn submit" lay-submit lay-filter="">保存</button>
+                        <button class="layui-btn layui-btn-primary cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+    });
+
+    $("#addU").click(function () {
+        layer.open({
+            type:1,
+            title: '修改用户',
+            content: $("#fancybox"),
+            area:['470px',"390px"]
+        });
+    });
+</script>

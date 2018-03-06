@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>新增日报</title>
+
+    <link rel="stylesheet" href="../../css/personalCenterLess/newAddDaily.css">
+    <link rel="stylesheet" href="../../css/commonLess/commonDetails.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="content_w">
+            <p>新增日报</p>
+            <div class="header">
+                <p>基本信息</p>
+            </div>
+            <form style="margin-top: 45px">
+                <ul style="margin-bottom: 20px">
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label for="xybh">填写日期 :</label>
+                            </div>
+                            <div>
+                                <input type="text" id="xybh"><img src="../../img/stars.png">
+                            </div>
+                            <!--<div>
+                                <span>您输入的客户已存在,请<a href="">点击查看!</a></span>
+                            </div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label for="zj">填报人 :</label>
+                            </div>
+                            <div>
+                                <input readonly="readonly" value="hahha" type="text" id="zj">
+                                <!--<img src="../../img/stars.png">-->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>所属部门 :</label>
+                            </div>
+                            <div>
+                                <!--<select>-->
+                                <!--<option>请选择</option>-->
+                                <!--</select>-->
+                                <!--<span><img src="../../img/xiala.png">  </span>-->
+                                <input readonly="readonly" value="hahha" type="text" id="department">
+                                <!--<img src="../../img/stars.png">-->
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">日报内容 :</label>
+                            </div>
+                            <div>
+                                <textarea class="dailyContent"></textarea>
+                                <img src="../../img/stars.png" class="img1">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </form>
+            <div style="clear: both"></div>
+            <div class="header">
+                <p>跟进记录</p>
+            </div>
+            <div style="clear: both"></div>
+            <div class="right">
+                <table class="layui-table getBusT">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>商机名称</th>
+                        <th>联系人</th>
+                        <th>拜访方式</th>
+                        <th>拜访目的</th>
+                        <th>沟通成果</th>
+                        <th>下一步计划</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <td>农业银行大数据平台</td>
+                    <td>网三</td>
+                    <td>见面</td>
+                    <td>进一步沟通招标情报</td>
+                    <td>非常顺利</td>
+                    <td>继续跟进</td>
+
+                    </tbody>
+                </table>
+                <table class="layui-table getCusT">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>客户名称</th>
+                        <th>拜访方式</th>
+                        <th>拜访时间</th>
+                        <th>拜访目的</th>
+                        <th>拜访效果</th>
+                        <th>下一步计划</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <td>农业银行大数据平台</td>
+                    <td>网三</td>
+                    <td>见面</td>
+                    <td>进一步沟通招标情报</td>
+                    <td>非常顺利</td>
+                    <td>继续跟进</td>
+                    </tbody>
+                </table>
+                <table class="layui-table getHzT">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>合资公司名称</th>
+                        <th>联系人</th>
+                        <th>拜访方式</th>
+                        <th>拜访目的</th>
+                        <th>沟通成果</th>
+                        <th>下一步计划</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <td>农业银行大数据平台</td>
+                    <td>网三</td>
+                    <td>见面</td>
+                    <td>进一步沟通招标情报</td>
+                    <td>非常顺利</td>
+                    <td>继续跟进</td>
+
+                    </tbody>
+                </table>
+            </div>
+            <div style="clear: both"></div>
+
+            <div class="header">
+                <p>客户跟进记录</p>
+            </div>
+            <table class="layui-table" id="cusT">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="all">
+                        <div class="layui-form-checkbox layui-unselect layui-form-checked" lay-skin="primary"><i
+                                class="layui-icon"></i></div>
+                    </th>
+                    <th>客户名称</th>
+                    <th>拜访方式</th>
+                    <th>拜访时间</th>
+                    <th>拜访目的</th>
+                    <th>拜访效果</th>
+                    <th>下一步计划</th>
+                </tr>
+                </thead>
+                <tbody class="cusTable">
+                <!--<tr>
+                    <td>
+                        <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                class="layui-icon"></i></div>
+                    </td>
+                    <td>农业银行大数据平台</td>
+                    <td>网三</td>
+                    <td>见面</td>
+                    <td>进一步沟通招标情报</td>
+                    <td>非常顺利</td>
+                    <td>继续跟进</td>
+                </tr>-->
+                </tbody>
+            </table>
+
+            <div class="header">
+                <p>商机跟进记录</p>
+            </div>
+            <table class="layui-table" id="busT">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="all">
+                        <div class="layui-form-checkbox layui-unselect layui-form-checked" lay-skin="primary"><i
+                                class="layui-icon"></i></div>
+                    </th>
+                    <th>商机名称</th>
+                    <th>联系人</th>
+                    <th>拜访方式</th>
+                    <th>拜访目的</th>
+                    <th>沟通成果</th>
+                    <th>下一步计划</th>
+                </tr>
+                </thead>
+                <tbody class="busTable">
+                <!--<tr>
+                    <td>
+                        <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                class="layui-icon"></i></div>
+                    </td>
+                    <td>农业银行大数据平台</td>
+                    <td>网三</td>
+                    <td>见面</td>
+                    <td>进一步沟通招标情报</td>
+                    <td>非常顺利</td>
+                    <td>继续跟进</td>
+                </tr>-->
+                </tbody>
+            </table>
+
+            <div class="header">
+                <p>合资公司跟进记录</p>
+            </div>
+            <table class="layui-table" id="hzT">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="all">
+                        <div class="layui-form-checkbox layui-unselect layui-form-checked" lay-skin="primary"><i
+                                class="layui-icon"></i></div>
+                    </th>
+                    <th>合资公司名称</th>
+                    <th>联系人</th>
+                    <th>拜访方式</th>
+                    <th>拜访目的</th>
+                    <th>沟通成果</th>
+                    <th>下一步计划</th>
+                </tr>
+                </thead>
+                <tbody class="hzTable">
+                <!--<tr>
+                    <td>
+                        <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                class="layui-icon"></i></div>
+                    </td>
+                    <td>农业银行大数据平台</td>
+                    <td>网三</td>
+                    <td>见面</td>
+                    <td>进一步沟通招标情报</td>
+                    <td>非常顺利</td>
+                    <td>继续跟进</td>
+                </tr>-->
+                </tbody>
+            </table>
+
+            <!--<div class="layui-tab">
+                <ul class="layui-tab-title tab">
+                    <li class="layui-this ">商机</li>
+                    <li>客户</li>
+                    <li>合资公司</li>
+                </ul>
+                <div class="layui-tab-content ">
+                    <div class="layui-tab-item tab_con layui-show right2">
+                        <table class="layui-table" id="busT">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="all">
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </th>
+                                <th>商机名称</th>
+                                <th>联系人</th>
+                                <th>拜访方式</th>
+                                <th>拜访目的</th>
+                                <th>沟通成果</th>
+                                <th>下一步计划</th>
+                            </tr>
+                            </thead>
+                            <tbody class="busTable">
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="layui-tab-item tab_con right2">
+                        <table class="layui-table" id="cusT">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="all">
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </th>
+                                <th>客户名称</th>
+                                <th>拜访方式</th>
+                                <th>拜访时间</th>
+                                <th>拜访目的</th>
+                                <th>拜访效果</th>
+                                <th>下一步计划</th>
+                            </tr>
+                            </thead>
+                            <tbody class="cusTable">
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="layui-tab-item tab_con right2">
+                        <table class="layui-table" id="hzT">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="all">
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </th>
+                                <th>合资公司名称</th>
+                                <th>联系人</th>
+                                <th>拜访方式</th>
+                                <th>拜访目的</th>
+                                <th>沟通成果</th>
+                                <th>下一步计划</th>
+                            </tr>
+                            </thead>
+                            <tbody class="hzTable">
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                            class="layui-icon"></i></div>
+                                </td>
+                                <td>农业银行大数据平台</td>
+                                <td>网三</td>
+                                <td>见面</td>
+                                <td>进一步沟通招标情报</td>
+                                <td>非常顺利</td>
+                                <td>继续跟进</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>-->
+            <p class="footer">
+                <input type="button" value="保存" class="act save">
+                <input type="button" value="提交" class="present">
+            </p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="../../js/personalCenter/newAddDaily.js"></script>
+</html>

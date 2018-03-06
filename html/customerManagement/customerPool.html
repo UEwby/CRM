@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>客户池</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<link rel="stylesheet" href="../../css/popup/customer.css">
+
+<!--客户-->
+<!--转移客户弹层-->
+<div id="popTransfer" class="clearfix pop">
+    <div class="fl clearfix top">
+        <span class="fl toHow">转移给：</span>
+        <input type="text" placeholder="请输入姓名" class="fl">
+        <div class="fr transfer-name">
+            <i class="del-icon"></i>
+            <span></span>
+        </div>
+    </div>
+    <ul class="content-name">
+    </ul>
+    <p class="tips">* 必须选择“转移人”才能进行“保存”</p>
+</div>
+<!--合并客户弹层-->
+<div id="popMerge" class="pop">
+    <div class="opportunities-1">
+        <h3>客户信息1</h3>
+        <span class="this-customer">该商机为主</span>
+    </div>
+    <div class="opportunities-2">
+        <h3>客户信息2</h3>
+        <span class="this-customer">该商机为主</span>
+    </div>
+    <form class="layui-form">
+        <ul class="ul-customer ul-customer1">
+            <li>
+                <input type="radio" name="customerName" title="客户名称：">
+                <input type="radio" name="customerType" title="客户类型：">
+                <input type="radio" name="customerSite" title="所属地区：">
+                <input type="radio" name="customerCall" title="总机电话：">
+                <input type="radio" name="customerAddress" title="详细地址：">
+            </li>
+        </ul>
+        <ul class="ul-customer ul-customer2">
+            <li>
+                <input type="radio" name="customerName" title="客户名称：">
+                <input type="radio" name="customerType" title="客户类型：">
+                <input type="radio" name="customerSite" title="所属地区：">
+                <input type="radio" name="customerCall" title="总机电话：">
+                <input type="radio" name="customerAddress" title="详细地址：">
+            </li>
+        </ul>
+    </form>
+    <p class="footer2">
+        <span>* 必须选择"该商机为主"才能确定合并</span>
+    </p>
+</div>
+
+
+<!--合并客户弹出层-->
+<div id="div1" class="pop">
+    <ul>
+        <li>
+            <div class="header">
+                <p>客户信息1</p>
+                <span>以该客户为主</span>
+            </div>
+            <div class="box">
+                <ol>
+                    <li><input type="checkbox"><span>客户名称 :</span><span>格力电器责任有限公司</span></li>
+                    <li><input type="checkbox"><span>客户简称 :</span><span>--</span></li>
+                    <li><input type="checkbox"><span>客户类型 :</span><span>行业</span></li>
+                    <li><input type="checkbox"><span>所在地区 :</span><span>山东省青岛市市南区</span></li>
+                    <li><input type="checkbox"><span>总机电话 :</span><span>010-61230000</span></li>
+                    <li><input type="checkbox"><span>详细地址 :</span><span>山东省青岛市市南区768创意园</span></li>
+                </ol>
+            </div>
+        </li>
+        <li>
+            <div class="header">
+                <p>客户信息2</p>
+                <span>以该客户为主</span>
+            </div>
+            <div class="box">
+                <ol>
+                    <li><input type="checkbox"><span>客户名称 :</span><span>格力电器责任有限公司</span></li>
+                    <li><input type="checkbox"><span>客户简称 :</span><span>--</span></li>
+                    <li><input type="checkbox"><span>客户类型 :</span><span>行业</span></li>
+                    <li><input type="checkbox"><span>所在地区 :</span><span>山东省青岛市市南区</span></li>
+                    <li><input type="checkbox"><span>总机电话 :</span><span>010-61230000</span></li>
+                    <li><input type="checkbox"><span>详细地址 :</span><span>山东省青岛市市南区768创意园</span></li>
+                </ol>
+            </div>
+        </li>
+    </ul>
+    <div style="clear: both"></div>
+    <p class="footer2">
+        <span>* 必须选择"该客户为主"才能确定合并</span>
+        <input type="submit" value="保存" class="act">
+        <input type="button" value="取消">
+    </p>
+</div>
+
+<!--禁用弹出层-->
+<div id="div" class="pop">
+    <p>确定禁用此用户!</p>
+    <p class="footer">
+        <input type="submit" value="保存" class="act">
+        <input type="button" value="取消">
+    </p>
+</div>
+
+
+<script>
+    layui.use('layer', function () {
+        var layer = layui.layer;
+    });
+
+</script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="wrap">
+            <!-- CRM终端顶部 -->
+            <div class="wrap-top">
+                <ol class='fl'>
+                    <li class="nav-btn toNewCustomer">新建客户</li>
+                    <li class="nav-btn toTransfer">转移客户</li>
+                    <li class="nav-btn toShare">共享客户</li>
+                    <!--<li class="nav-btn toMerge">合并客户</li>-->
+                    <li class="nav-btn export">导出全部</li>
+                </ol>
+                <div class="fr">
+                    <div class='input-search fl'>
+                        <input type="text" placeholder="客户名称、负责人姓名" id="searchname">
+                        <i class="input-search" id="inp-search"></i>
+                    </div>
+                    <div class="advanced-filter fl"></div>
+                </div>
+            </div>
+            <!-- CRM终端table区 -->
+            <div class="wrap-table clearfix">
+                <div class="layui-form">
+                    <table class="layui-table tab-customer">
+                        <!--<colgroup>
+                            <col width="5%">
+                            <col width="20%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width='10%' style="border-right: none">
+                        </colgroup>-->
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="all layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                    class="layui-icon"></i></div>
+                            </th>
+                            <th>客户名称</th>
+                            <th>客户负责人</th>
+                            <th>所在地区</th>
+                            <th>客户类型</th>
+                            <th>创建时间</th>
+                            <th>最新跟进时间</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="pager"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--筛选弹出层-->
+<div id="popFilter" class="pop">
+    <ul class="ul-popupFilter clearfix">
+        <li>
+            <div>
+                <label>客户类型 :</label>
+            </div>
+            <div>
+                <select id="customertype">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+        </li>
+        <li></li>
+        <li>
+            <div>
+                <label>所在地 :</label>
+            </div>
+            <div id="citys">
+                <select id="s_province" class="prov" name="s_province"></select>
+                <select id="s_city" class="city" name="s_city"></select>
+                <select id="s_county" class="dist" name="s_county"></select>
+            </div>
+        </li>
+    </ul>
+    <p class="footer">
+        <input type="button" value="重置" id="cancel1">
+        <input type="button" value="确定" id="ok1">
+    </p>
+</div>
+</body>
+
+<script src="../../js/common/city1.js"></script>
+<script src="../../js/customerManagement/customerPool.js"></script>
+</html>
+
+
+
+

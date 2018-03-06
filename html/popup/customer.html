@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="../../css/popup/customer.css">
+
+<!--客户-->
+<!--转移客户弹层-->
+<div id="popTransfer" class="clearfix pop">
+    <div class="fl clearfix top">
+        <span class="fl toHow">转移给：</span>
+        <input type="text" placeholder="请输入姓名" class="fl">
+        <div class="fr transfer-name">
+            <i class="del-icon"></i>
+            <span></span>
+        </div>
+    </div>
+    <ul class="content-name">
+    </ul>
+    <p class="tips">* 必须选择“转移人”才能进行“保存”</p>
+</div>
+<!--合并客户弹层-->
+<div id="popMerge" class="pop">
+    <div class="opportunities-1">
+        <h3>客户信息1</h3>
+        <span class="this-customer">该商机为主</span>
+    </div>
+    <div class="opportunities-2">
+        <h3>客户信息2</h3>
+        <span class="this-customer">该商机为主</span>
+    </div>
+    <form class="layui-form">
+        <ul class="ul-customer ul-customer1">
+            <li>
+                <input type="radio" name="customerName" title="客户名称：">
+                <input type="radio" name="customerType" title="客户类型：">
+                <input type="radio" name="customerSite" title="所属地区：">
+                <input type="radio" name="customerCall" title="总机电话：">
+                <input type="radio" name="customerAddress" title="详细地址：">
+            </li>
+        </ul>
+        <ul class="ul-customer ul-customer2">
+            <li>
+                <input type="radio" name="customerName" title="客户名称：">
+                <input type="radio" name="customerType" title="客户类型：">
+                <input type="radio" name="customerSite" title="所属地区：">
+                <input type="radio" name="customerCall" title="总机电话：">
+                <input type="radio" name="customerAddress" title="详细地址：">
+            </li>
+        </ul>
+    </form>
+    <p class="footer2">
+        <span>* 必须选择"该商机为主"才能确定合并</span>
+    </p>
+</div>
+
+
+<!--合并客户弹出层-->
+<div id="div1" class="pop">
+    <ul>
+        <li>
+            <div class="header">
+                <p>客户信息1</p>
+                <span>以该客户为主</span>
+            </div>
+            <div class="box">
+                <ol>
+                    <li><input type="checkbox"><span>客户名称 :</span><span>格力电器责任有限公司</span></li>
+                    <li><input type="checkbox"><span>客户简称 :</span><span>--</span></li>
+                    <li><input type="checkbox"><span>客户类型 :</span><span>行业</span></li>
+                    <li><input type="checkbox"><span>所在地区 :</span><span>山东省青岛市市南区</span></li>
+                    <li><input type="checkbox"><span>总机电话 :</span><span>010-61230000</span></li>
+                    <li><input type="checkbox"><span>详细地址 :</span><span>山东省青岛市市南区768创意园</span></li>
+                </ol>
+            </div>
+        </li>
+        <li>
+            <div class="header">
+                <p>客户信息2</p>
+                <span>以该客户为主</span>
+            </div>
+            <div class="box">
+                <ol>
+                    <li><input type="checkbox"><span>客户名称 :</span><span>格力电器责任有限公司</span></li>
+                    <li><input type="checkbox"><span>客户简称 :</span><span>--</span></li>
+                    <li><input type="checkbox"><span>客户类型 :</span><span>行业</span></li>
+                    <li><input type="checkbox"><span>所在地区 :</span><span>山东省青岛市市南区</span></li>
+                    <li><input type="checkbox"><span>总机电话 :</span><span>010-61230000</span></li>
+                    <li><input type="checkbox"><span>详细地址 :</span><span>山东省青岛市市南区768创意园</span></li>
+                </ol>
+            </div>
+        </li>
+    </ul>
+    <div style="clear: both"></div>
+    <p class="footer2">
+        <span>* 必须选择"该客户为主"才能确定合并</span>
+        <input type="submit" value="保存" class="act">
+        <input type="button" value="取消">
+    </p>
+</div>
+
+<!--禁用弹出层-->
+<div id="div" class="pop">
+    <p>确定禁用此用户!</p>
+    <p class="footer">
+        <input type="submit" value="保存" class="act">
+        <input type="button" value="取消">
+    </p>
+</div>
+
+
+<script>
+    layui.use('layer', function () {
+        var layer = layui.layer;
+    });
+
+</script>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>新建商机</title>
+    <!-- 这个不能使用各个部分的新建 New 因为模板不同 -->
+    <link rel="stylesheet" href="../../css/opportunityManagementLess/newOpportunities.css">
+</head>
+
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script> <header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="content_w">
+            <p class="opp-tit">新建商机</p>
+            <div class="header">
+                <p>客户档案</p>
+            </div>
+            <form>
+                <ul id="crmcustomerlinkman">
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>客户名称：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="khmc" placeholder=" 请输入客户名称" data-key="customername">
+                                <ul class="lx-box"></ul>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>客户联系人：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="khlxr" disabled data-key='LinkManName'>
+                                <select class="p-down" hidden id="linkmanid"></select>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>职位：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="zw" disabled data-key="LinkManPosition">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>级别：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="jb" disabled data-key="LinkManLevel">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>手机：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="sj" disabled data-key="LinkManMobile">
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="box">
+                            <div>
+                                <label>联系人类别：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="lxrlb" disabled data-key="LinkManType">
+                            </div>
+                        </div>
+                    </li> -->
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>邮箱：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="yx" disabled data-key="LinkManEmail">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>座机：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="zj" disabled data-key="LinkManPhone">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div style="clear:both;"></div>
+            <div class="header">
+                <p>商机基本信息</p>
+            </div>
+            <form>
+                <ul id="crmcustomerproject">
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>商机名称：</label>
+                            </div>
+                            <div class="re opportunityName">
+                                <input type="text" id="khmc2" data-key="projectname">
+                                <ul class="ul-opportunityName"></ul>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>商机等级：</label>
+                            </div>
+                            <div>
+                                <select data-key="projectlevel">
+                                    <option>请选择</option>
+                                    <option value="89">A类100%（已中标）</option>
+                                    <option value="90">B类90%-99%（招投标前期）</option>
+                                    <option value="91">C类60%-89%（方案优化、方案过会）</option>
+                                    <option value="92">D类50%-59%（解决方案沟通、预算明确并且见过最高决策人）</option>
+                                    <option value="93">E类30%-50%（需求明确并见过最高决策人）</option>
+                                    <option value="94">F类29%以下（其他）</option>
+                                </select>
+                                <span>
+                                    <i class="bg-new"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>商机状态：</label>
+                            </div>
+                            <div>
+                                <select data-key="projectstate">
+                                    <option>请选择</option>
+                                    <option value="1">签署合同</option>
+                                    <option value="2">已中标</option>
+                                    <option value="3">招投标</option>
+                                    <option value="4">招投标前期</option>
+                                    <option value="5">编写解决方案</option>
+                                    <option value="6">提供建设性方案</option>
+                                    <option value="7">商机沟通</option>
+                                    <option value="8">政府资金申请</option>
+                                    <option value="9">联合办学</option>
+                                </select>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>商机类别：</label>
+                            </div>
+                            <div>
+                                <select id="sjlb" data-key="businessstate">
+                                    <option>请选择</option>
+                                </select>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>商务负责人：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="swfzr" data-key="executive">
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>部门：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="bm" data-key="deptment">
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>售前负责人：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="sqfzr" data-key="presaler">
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>技术责任人：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="jszrr" data-key="leadership">
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>预算状态：</label>
+                            </div>
+                            <div>
+                                <select data-key="budgetstatus">
+                                    <option>请选择</option>
+                                    <option value="1">待申请</option>
+                                    <option value="2">申请中（主导）</option>
+                                    <option value="3">申请中（非主导）</option>
+                                    <option value="4">已批复</option>
+                                </select>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>是否转包九次方：</label>
+                            </div>
+                            <div>
+                                <select data-key="issubcontract">
+                                    <option>请选择</option>
+                                    <option value="1">是</option>
+                                    <option value="0">否</option>
+                                </select>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>我方签约主体：</label>
+                            </div>
+                            <div>
+                                <select data-key="contractsubject">
+                                    <option>请选择</option>
+                                    <option value="106">合资公司</option>
+                                    <option value="107">九次方</option>
+                                    <option value="3">其他</option>
+                                </select>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="yjhtje">预计合同金额：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="yjhtje" data-key="signmoney"> 万元
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label>预计签约日期：</label>
+                            </div>
+                            <div>
+                                <input type="text" id="plan-date" data-key="signdate">
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div style="clear:both;"></div>
+            <div class="header">
+                <p>客户联系人跟进信息</p>
+            </div>
+            <div class="right" id='visit-log'>
+                <ul id="crmcustomerprojectexternaldecision">
+                    <li>
+                        <table class="layui-table" id="all-control-1">
+                            <colgroup>
+                                <col width="12%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="25%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th hidden>
+                                    <div class="layui-form-checkbox layui-unselect all-1" lay-skin="primary">
+                                        <i class="layui-icon"></i>
+                                    </div>
+                                </th>
+                                <th>项目最高决策人</th>
+                                <th>拜访时间</th>
+                                <th>联系方式</th>
+                                <th>职位</th>
+                                <th>级别</th>
+                                <th>拜访效果</th>
+                                <th>下一步计划</th>
+                                <th>
+                                    <i class="layui-icon append"
+                                       style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf">&#xe654;</i>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="all-control-1" data-decisiontype='1'>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="layui-table" id="all-control-2">
+                            <colgroup>
+                                <col width="12%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="25%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th hidden>
+                                    <div class="layui-form-checkbox layui-unselect all-2" lay-skin="primary">
+                                        <i class="layui-icon"></i>
+                                    </div>
+                                </th>
+                                <th>业务对接人</th>
+                                <th>拜访时间</th>
+                                <th>联系方式</th>
+                                <th>职位</th>
+                                <th>级别</th>
+                                <th>拜访效果</th>
+                                <th>下一步计划</th>
+                                <th>
+                                    <i class="layui-icon  append"
+                                       style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf">&#xe654;</i>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="all-control-2" data-decisiontype='2'>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="layui-table" id="all-control-3">
+                            <colgroup>
+                                <col width="12%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="25%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th hidden>
+                                    <div class="layui-form-checkbox layui-unselect all-3" lay-skin="primary">
+                                        <i class="layui-icon"></i>
+                                    </div>
+                                </th>
+                                <th>拜访最高负责人</th>
+                                <th>拜访时间</th>
+                                <th>联系方式</th>
+                                <th>职位</th>
+                                <th>级别</th>
+                                <th>拜访效果</th>
+                                <th>下一步计划</th>
+                                <th>
+                                    <i class="layui-icon  append"
+                                       style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf">&#xe654;</i>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="all-control-3" data-decisiontype='3'>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="layui-table" id="all-control-4">
+                            <colgroup>
+                                <col width="12%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="23%">
+                                <col width="25%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th hidden>
+                                    <div class="layui-form-checkbox layui-unselect all-4" lay-skin="primary">
+                                        <i class="layui-icon"></i>
+                                    </div>
+                                </th>
+                                <th>上次拜访对象</th>
+                                <th>拜访时间</th>
+                                <th>联系方式</th>
+                                <th>职位</th>
+                                <th>级别</th>
+                                <th>拜访效果</th>
+                                <th>下一步计划</th>
+                                <th>
+                                    <i class="layui-icon  append"
+                                       style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf">&#xe654;</i>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="all-control-4" data-decisiontype='4'>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            <div style="clear:both;"></div>
+            <div class="header">
+                <p>综合情况</p>
+            </div>
+            <form>
+                <ul id="crmcustomerprojectreport">
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">历次拜访进展：</label>
+                            </div>
+                            <div>
+                                <textarea class="visitcontent" class="visitcontent" disabled></textarea>
+                                <textarea data-key="previousvisits" class="visitcontent-h" hidden></textarea>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">潜在风险：</label>
+                            </div>
+                            <div>
+                                <textarea data-key="risk"></textarea>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">整体评估：</label>
+                            </div>
+                            <div>
+                                <textarea data-key="assessment"></textarea>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">应对策略：</label>
+                            </div>
+                            <div>
+                                <textarea data-key="strategy"></textarea>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">竞争对手：</label>
+                            </div>
+                            <div>
+                                <textarea data-key="competitor"></textarea>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div>
+                                <label class="label2">资源支持：</label>
+                            </div>
+                            <div>
+                                <textarea data-key="resources"></textarea>
+                                <i class="bg-new"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <p class="footer">
+                <input type="button" value="保存" class="act">
+                <input type="button" value="商机立项" class="sjlx">
+            </p>
+        </div>
+    </div>
+</div>
+<div class="pop-visit-log" hidden>
+    <table class="layui-table">
+        <colgroup>
+            <col width="49px">
+            <col width="131px">
+            <col width="150px">
+            <col width="131px">
+            <col width="131px">
+            <col width="131px">
+            <col width="131px">
+            <col width="131px">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>
+                <div class="layui-form-checkbox layui-unselect all-5" lay-skin="primary">
+                    <i class="layui-icon"></i>
+                </div>
+            </th>
+            <th>联系人姓名</th>
+            <th>拜访类别</th>
+            <th>拜访方式</th>
+            <th>拜访时间</th>
+            <th>拜访目的</th>
+            <th>拜访效果</th>
+            <th>下一步计划</th>
+        </tr>
+        </thead>
+        <tbody class="all-control-5">
+        </tbody>
+    </table>
+</div>
+</body>
+<script src="../../js/opportunityManagement/module.js"></script>
+<script src="../../js/opportunityManagement/newOpportunities.js"></script>
+
+</html>

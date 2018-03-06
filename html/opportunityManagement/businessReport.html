@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>商机报备表</title>
+    <link rel="stylesheet" href="../../css/opportunityManagementLess/businessReport.css">
+    <!-- 单独样式 -->
+</head>
+
+<body>
+    <!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script> <header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+    <div class='main'>
+        <div class="con-title">
+            <h3 class="count-title first-title">商机报备表预览</h3>
+            <p class='count-drop'>
+                <span class='print'>打印</span>
+            </p>
+        </div>
+        <div id="print-area">
+            <ul class="print-list">
+            </ul>
+            <div class="date" style=" text-align: right;"></div>
+        </div>
+    </div>
+</body>
+<script src="../../resource/jquery.jqprint/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../resource/jquery.jqprint/jquery.jqprint-0.3.js"></script>
+<script src="../../js/opportunityManagement/module.js"></script>
+<script src="../../js/opportunityManagement/businessReport.js"></script>
+
+</html>

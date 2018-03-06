@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单点登录</title>
+</head>
+<body>
+
+</body>
+<script src="../../js/common/jquery.js"></script>
+<script>
+    const Url = 'http://192.168.3.67:8088/jusfoun-crm/';
+
+    function Ajax(data) {
+        var def = $.Deferred();
+        var canceled = false;
+
+        if (data.type == 'get') {
+            var jqXHR = $.ajax({
+                type: "get",
+                url: Url + data.url,
+                data: {},
+                xhrFields: {withCredentials: true},
+                crossDomain: true,
+                contentType: "application/json",
+                datatype: "json",
+
+                error: function (xhr, status, error) {
+                    if (canceled) return;
+                    var data = {
+                        result: 4,
+                        message: error,
+                        status: status
+                    };
+                    console.error("调用接口:[" + this.url + "]报错;状态码:[" + xhr.status + "];错误信息:[" + error + "]");
+                    def.reject(data);
+                },
+                success: function (data) {
+                    if (canceled) return;
+                    def.resolve(data);
+                }
+            });
+
+            var promise = def.promise();
+            var then = promise.then;
+            var thenWrapper = function () {
+                var promise = then.apply(this, arguments);
+                promise.cancel = function () {
+                    canceled = true;
+                    jqXHR.abort();
+                };
+                promise.then = thenWrapper;
+                return promise;
+            };
+            promise.then = thenWrapper;
+
+            return promise;
+
+
+        } else if (data.type == 'post') {
+            var saveData = JSON.stringify(data.data);
+
+            var jqXHR = $.ajax({
+                type: "post",
+                url: Url + data.url,
+                data: saveData,
+                xhrFields: {withCredentials: true},
+                crossDomain: true,
+                contentType: "application/json",
+                datatype: "json",
+
+                error: function (xhr, status, error) {
+                    if (canceled) return;
+                    var data = {
+                        result: 4,
+                        message: error,
+                        status: status
+                    };
+                    console.error("调用接口:[" + this.url + "]报错;状态码:[" + xhr.status + "];错误信息:[" + error + "]");
+                    def.reject(data);
+                },
+                success: function (data) {
+                    if (canceled) return;
+                    def.resolve(data);
+                }
+            });
+
+            var promise = def.promise();
+            var then = promise.then;
+            var thenWrapper = function () {
+                var promise = then.apply(this, arguments);
+                promise.cancel = function () {
+                    canceled = true;
+                    jqXHR.abort();
+                };
+                promise.then = thenWrapper;
+                return promise;
+            };
+            promise.then = thenWrapper;
+
+            return promise;
+        }
+
+    }
+    let data = {
+        type: 'get',
+        url: 'pcc/ssoservice/ssoback',
+    };
+    Ajax(data).then(function (res) {
+        console.log(res)
+    })
+</script>
+</html>

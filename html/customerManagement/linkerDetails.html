@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>联系人详情</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonDetails.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="wrap">
+            <!-- 客户详情 -->
+            <div class="wrap-top">
+                <!-- 客户详情头部 -->
+                <div class="wrap-con">
+                    <div class="con-title">
+                        <h3 class="count-title" id="linkmanname"></h3>
+                        <p class='count-drop'>
+                            <span class='edit'>编辑</span>
+                        </p>
+                    </div>
+                    <ol class='count-info-stop clearfix'>
+                        <li><span class="tit">所属客户：</span><span class="con toGo" id="customername">-</span></li>
+                        <li><span class="tit">部门：</span><span class="con" id="linkmandepartmnet">-</span></li>
+                        <li><span class="tit">职位：</span><span class="con" id="linkmanposition">-</span></li>
+                        <li><span class="tit">邮箱：</span><span class="con" id="linkmanemail">-</span></li>
+                        <li><span class="tit">级别：</span><span class="con" id="linkmanlevel">-</span></li>
+                        <li><span class="tit">微信：</span><span class="con" id="linkmanwx">-</span></li>
+                        <li><span class="tit">手机：</span><span class="con" id="linkmanmobile">-</span></li>
+                        <li><span class="tit">电话：</span><span class="con" id="linkmanphone">-</span></li>
+                        <li><span class="tit">备注：</span><span class="con" id="linkmanBqDesc">-</span></li>
+
+                        <!--<div class="packUp">
+                            <i class="layui-icon">&#xe619;</i><span>收起</span>
+                        </div>-->
+                    </ol>
+                </div>
+            </div>
+            <!-- 客户详情底部-选项卡 -->
+            <div class="wrap-bottom re">
+                <div class="wrap-con">
+                    <div class="layui-tab">
+                        <!--<div class="add" name="1">新建-跟进</div>-->
+                        <ul class="layui-tab-title">
+                            <li class="layui-this" name="0">其他信息</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <div class="tabControl">
+                                    <div>
+                                        <div class="box2">
+                                            <span class="spL">创建人：</span><span class="spR" id="creatorname"></span>
+                                        </div>
+                                        <div class="box2">
+                                            <span class="spL">创建时间：</span><span class="spR" id="creatordate"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="box2">
+                                            <span class="spL">修改日期：</span><span class="spR" id="updatedate"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/customerManagement/linkerDetails.js"></script>
+</html>

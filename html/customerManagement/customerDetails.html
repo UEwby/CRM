@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>客户详情</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonDetails.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="wrap">
+            <!-- 客户详情 -->
+            <div class="wrap-top">
+                <!-- 客户详情头部 -->
+                <div class="wrap-con">
+                    <div class="con-title">
+                        <h3 class="count-title"></h3>
+                        <p class='count-drop'>
+                            <span class='edit'>编辑</span>
+                        </p>
+                    </div>
+                    <ol class='count-info-stop clearfix'>
+                        <li><span class="tit">客户名称：</span><span class="con" id="customername"></span></li>
+                        <li class="clearfix"><span class="tit">客户地址：</span><p class="p0" id="site"></p></li>
+                        <li><span class="tit">客户类型：</span><span class="con" id="customertypename"></span></li>
+                        <li><span class="tit">总机：</span><span class="con" id="customertelphone"></span></li>
+
+                        <!--<div class="packUp">
+                            <i class="layui-icon">&#xe619;</i><span>收起</span>
+                        </div>-->
+                    </ol>
+                </div>
+            </div>
+            <!-- 客户详情底部-选项卡 -->
+            <div class="wrap-bottom re">
+                <div class="wrap-con">
+                    <div class="layui-tab" lay-filter="tabs">
+                        <div class="add" name="1">新建-跟进</div>
+                        <ul class="layui-tab-title">
+                            <li class="layui-this" name="1">跟进记录</li>
+                            <li name="2">商机</li>
+                            <!--<li name="3">合资公司</li>-->
+                            <li name="4">联系人</li>
+                            <li name="0">其他信息</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">跟进记录</div>
+                            <div class="layui-tab-item opportunity">商机</div>
+                            <!--<div class="layui-tab-item joint">合资公司</div>-->
+                            <div class="layui-tab-item linkerDetails">联系人</div>
+                            <div class="layui-tab-item otherDetails">
+                                <div class="tabControl">
+                                    <div>
+                                        <div class="box2">
+                                            <span class="spL">负责人：</span><span class="spR" id="customermanagername"></span>
+                                        </div>
+                                        <div class="box2">
+                                            <span class="spL">创建时间：</span><span class="spR" id="createdate"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="box2">
+                                            <span class="spL">创建人：</span><span class="spR" id="creatorname"></span>
+                                        </div>
+                                        <div class="box2">
+                                            <span class="spL">修改日期：</span><span class="spR" id="customerupdatetime"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="box2">
+                                            <span class="spL">跟进人：</span><span class="spR" id="namelist"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src='../../js/customerManagement/customerDetails.js'></script>
+</html>
+
+
+

@@ -1,0 +1,129 @@
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<link rel="stylesheet" href="../../css/popup/2.css">
+
+<!--新建商机-->
+<button id="btn">新建商机_弹出</button>
+<div id="div" style="display: none;padding: 5px 30px">
+    <div class="right2">
+        <ul>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>联系人姓名</li>
+                    <li>拜访类别</li>
+                    <li>拜访方式</li>
+                    <li>拜访时间</li>
+                    <li>拜访目的</li>
+                    <li>拜访效果</li>
+                    <li>下一步计划</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>王远</li>
+                    <li>项目最高决策人拜访</li>
+                    <li>线上</li>
+                    <li>2017-09-23</li>
+                    <li>初步了解</li>
+                    <li>不错</li>
+                    <li>继续跟进</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>王远</li>
+                    <li>项目最高决策人拜访</li>
+                    <li>线上</li>
+                    <li>2017-09-23</li>
+                    <li>初步了解</li>
+                    <li>不错</li>
+                    <li>继续跟进</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>王远</li>
+                    <li>项目最高决策人拜访</li>
+                    <li>线上</li>
+                    <li>2017-09-23</li>
+                    <li>初步了解</li>
+                    <li>不错</li>
+                    <li>继续跟进</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>王远</li>
+                    <li>项目最高决策人拜访</li>
+                    <li>线上</li>
+                    <li>2017-09-23</li>
+                    <li>初步了解</li>
+                    <li>不错</li>
+                    <li>继续跟进</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>王远</li>
+                    <li>项目最高决策人拜访</li>
+                    <li>线上</li>
+                    <li>2017-09-23</li>
+                    <li>初步了解</li>
+                    <li>不错</li>
+                    <li>继续跟进</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><input type="checkbox"></li>
+                    <li>王远</li>
+                    <li>项目最高决策人拜访</li>
+                    <li>线上</li>
+                    <li>2017-09-23</li>
+                    <li>初步了解</li>
+                    <li>不错</li>
+                    <li>继续跟进</li>
+                </ol>
+            </li>
+
+        </ul>
+        <p class="footer mar1">
+            <input type="submit" value="保存" class="act">
+        </p>
+    </div>
+</div>
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+    });
+    $("#btn").click(function () {
+        layer.open({
+            type:1,
+            title: '选择客户拜访记录',
+            content: $("#div"),
+            area:['1100px',"450px"]
+        });
+    })
+</script>

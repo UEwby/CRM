@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>系统字典</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="con1 clearfix">
+            <ul>
+                <li>
+                    <button id="addword">新建字典</button>
+                </li>
+                <li class="layui-form layui-form-ext">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="select-box-wrap">
+                                <span class="select-label">字典类别：</span>
+                                <div id="wordflag" class="select-box" style="min-width: 150px;" li-value="">
+                                    <span class="text">请选择</span>
+                                    <ul class="dropdown">
+                                        <li li-value="">请选择</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div>
+                            <label>字典名称 :</label>
+                        </div>
+                        <div>
+                            <input id="wordname" maxlength="30" type="text" placeholder="请输入">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="cz">重置</button>
+                    <button class="sou">查询</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CRM终端table区 -->
+        <div class="wrap-table clearfix">
+            <div class="layui-form">
+                <table class="layui-table" id="wordlist">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>字典名称</th>
+                        <th>字典类别</th>
+                        <th>创建人</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pager"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="../../js/systemManagement/addDictionary.js"></script>
+</html>

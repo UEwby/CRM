@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>我的日报</title>
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/personalCenterLess/index.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="wrap">
+            <!-- CRM终端顶部 -->
+            <div class="wrap-top">
+                <ol class='fl'>
+                    <li class="nav-btn writeDaily">写日报</li>
+                    <li class="nav-btn export">导出全部</li>
+                </ol>
+                <div class="fr">
+                    <div id="drop-down-box" class="drop-down-box fl">
+                        <span class="dailyType">我的日报</span>
+                        <ul class="dropdown">
+                            <li>我的日报</li>
+                            <li>下属日报</li>
+                        </ul>
+                    </div>
+                    <div class='input-search fl'>
+                        <input type="text" placeholder="报告人姓名、部门名称">
+                        <i class=input-search1></i>
+                    </div>
+                    <div class="advanced-filter fl"></div>
+                </div>
+            </div>
+            <!-- CRM终端table区 -->
+            <div class="wrap-table clearfix">
+                <div class="layui-form">
+                    <table class="layui-table tab-daily">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="layui-form-checkbox layui-unselect all" lay-skin="primary"><i class="layui-icon"></i></div>
+                            </th>
+                            <th>汇报日期</th>
+                            <th>报告人</th>
+                            <th>部门</th>
+                            <th>日报状态</th>
+                            <th>日报内容</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody class="all-control">
+                        <!--<tr>-->
+                            <!--<td><input type="checkbox" name="" lay-skin="primary"></td>-->
+                            <!--<td>2017-09-09</td>-->
+                            <!--<td>阿利</td>-->
+                            <!--<td>产品及技术中心</td>-->
+                            <!--<td>已发布</td>-->
+                            <!--<td>日报信息日报信息日报信息日报信息</td>-->
+                            <!--<td>-->
+                                <!--<span>编辑</span>-->
+                                <!--<span>删除</span>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        </tbody>
+                    </table>
+                    <div class="pager"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="div4" style="display: none;">
+    <ul class="clearfix">
+        <li>
+            <div>
+                <label>汇报日期 :</label><input class="starttime" type="text"> - <input class="endtime" type="text">
+            </div>
+        </li>
+        <li>
+            <div>
+                <label>日报状态 :</label>
+            </div>
+            <div>
+                <select class="dailystate">
+                    <option value="0">请选择</option>
+                    <option value="1">草稿</option>
+                    <option value="2">已发布</option>
+                </select>
+                <!--<span><img src="../../img/xiala.png">  </span>-->
+            </div>
+        </li>
+    </ul>
+    <p class="footer" style="margin-top: 20px">
+        <input type="button" value="重置" class="act">
+        <input type="button" value="确定" class="agr">
+    </p>
+</div>
+</body>
+<script src="../../js/personalCenter/index.js"></script>
+</html>
+
+
+
+
+
+
+
+
+

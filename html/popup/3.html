@@ -1,0 +1,327 @@
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+<link rel="stylesheet" href="../../css/popup/3.css">
+
+<button id="btn">修改用户</button>
+<button id="btn1">增加用户</button>
+<button id="btn2">团队成员管理</button>
+<button id="btn3">团队成员管理</button>
+<button id="btn4">分配权限</button>
+<div id="xg" style="display: none;">
+    <ul>
+        <li>
+            <div class="box">
+                <div>
+                    <label>角色类型 :</label>
+                </div>
+                <div>
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                    <span><img src="../../img/xiala.png">  </span>
+                    <img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>姓名 :</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="张飞"><img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>账号 :</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="zhangfei@jusfoun.com"><img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>密码:</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="123456"><img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>周报类型 :</label>
+                </div>
+                <div>
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                    <span><img src="../../img/xiala.png">  </span>
+                    <img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p class="footer">
+        <button>重置密码</button>
+        <input type="submit" value="保存" class="act">
+        <input type="button" value="取消">
+    </p>
+</div>
+<div id="zj" style="display: none;">
+    <ul>
+        <li>
+            <div class="box">
+                <div>
+                    <label>角色类型 :</label>
+                </div>
+                <div>
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                    <span><img src="../../img/xiala.png">  </span>
+                    <img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>姓名 :</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="张飞"><img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>账号 :</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="zhangfei@jusfoun.com"><img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>密码:</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="123456"><img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div>
+                    <label>周报类型 :</label>
+                </div>
+                <div>
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                    <span><img src="../../img/xiala.png">  </span>
+                    <img src="../../img/stars.png">
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p class="footer">
+        <input type="submit" value="保存" class="act">
+        <input type="button" value="取消">
+    </p>
+</div>
+<div id="team" style="display: none;">
+    <div>
+        <div class="top clearfix">
+            <p>当前团队成员</p>
+            <p>当前领导</p>
+        </div>
+        <div class="contain clearfix">
+            <div class="cleft">
+                <ul>
+                    <li>安丽丽</li>
+                    <li>白富美</li>
+                    <li>李强</li>
+                    <li>谢云龙</li>
+                </ul>
+            </div>
+            <div class="cright">
+                <ul>
+                    <li>谢云龙</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>
+                <span>备注：领导有权监督团队成员工作进度</span>
+            </p>
+            <p>
+                <input type="submit" value="保存" class="act">
+                <input type="button" value="取消">
+            </p>
+        </div>
+    </div>
+</div>
+<div id="team2" style="display: none;">
+    <div>
+        <div class="top clearfix">
+            <p>当前团队成员</p>
+            <p>团队外成员<input type="text" placeholder="请输入" />
+                <img src="../../img/search-white.png"/>
+            </p>
+        </div>
+        <div class="contain clearfix">
+            <div class="cleft">
+                <ul>
+                    <li>安丽丽</li>
+                    <li>白富美</li>
+                    <li>李强</li>
+                    <li>谢云龙<span>领导<span></li>
+                </ul>
+            </div>
+            <div class="cright">
+                <ul>
+                    <li>阿郎</li>
+                    <li>安建</li>
+                    <li>毕静</li>
+                    <li>蔡琴</li>
+                </ul>
+            </div>
+            <ul>
+                <li><img src="../../img/right.png"/></li>
+                <li><img src="../../img/left.png"/></li>
+                <li><img src="../../img/Rright.png"/></li>
+                <li><img src="../../img/Lleft.png"/></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <p>
+                <input type="button" name="" id="" value="设置领导" />
+            </p>
+            <p>
+                <input type="submit" value="保存" class="act">
+                <input type="button" value="取消">
+            </p>
+        </div>
+    </div>
+</div>
+<div id="limits" style="display:none">
+    <div class="contain">
+        <ul id="demo"></ul>
+
+    </div>
+    <div class="bottom">
+        <input type="submit" name="" id="" value="保存" />
+        <input type="button" name="" id="" value="提交" />
+    </div>
+</div>
+<!--<script src="../../js/common/jquery.js"></script>-->
+<!--<script src="../../resource/layui/layui.js"></script>-->
+
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+    });
+
+    $("#btn").click(function () {
+        layer.open({
+            type:1,
+            title: '修改用户',
+            content: $("#xg"),
+            area:['470px',"390px"]
+        });
+    });
+    $("#btn1").click(function () {
+        layer.open({
+            type:1,
+            title: '增加用户',
+            content: $("#zj"),
+            area:['470px',"390px"]
+        });
+    });
+    $("#btn2").click(function () {
+        layer.open({
+            type:1,
+            title: '团队成员管理',
+            content: $("#team"),
+            area:['510px',"416px"]
+        });
+    });
+    $("#btn3").click(function () {
+        layer.open({
+            type:1,
+            title: '团队成员管理',
+            content: $("#team2"),
+            area:['510px',"416px"]
+        });
+    });
+    $("#btn4").click(function () {
+        layer.open({
+            type:1,
+            title: '分配权限',
+            content: $("#limits"),
+            area:['470px',"604px"]
+        });
+    });
+    layui.use('tree', function(){
+        layui.tree(options);
+    });
+    var options = {
+        elem: '#demo', //传入元素选择器
+        //skin: 'as', //设定皮肤
+        check: 'checkbox', //勾选风格
+        drag: true,//点击每一项时是否生成提示信息
+        checkboxName: 'aa[]',//复选框的name属性值
+        checkboxStyle: "",//设置复选框的样式，必须为字符串，css样式怎么写就怎么写
+        click: function(item) { //点击节点回调
+            console.log("item")
+        },
+        onchange: function (){//当当前input发生变化后所执行的回调
+            console.log(this);
+        }
+        ,nodes: [{ //节点
+            name: '<input type="checkbox">父节点1'
+            ,spread: true
+            ,children: [{
+                name: '子节点11'
+            },{
+                name: '子节点12'
+            }]
+        },{
+            name: '父节点2（可以点左侧箭头，也可以双击标题）'
+            ,children: [{
+                name: '子节点21'
+                ,children: [{
+                    name: '子节点211'
+                }]
+            }]
+        }]
+    };
+</script>

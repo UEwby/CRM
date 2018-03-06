@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>数据星河-合纵兼职人员周报</title>
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/personalCenterLess/separateColumns.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="content_w">
+            <p class="content_top">编辑周报</p>
+            <div class="content_title">
+                <p>数据星河-合纵兼职人员周报</p>
+                <p>填报人：<span class="informant"></span></p>
+                <p>所属部门：<span class="department"></span></p>
+                <p>汇报日期：<input class="reportDate"></p>
+            </div>
+
+            <div class="header">
+                <p>团队建设情况</p>
+            </div>
+            <table cellspacing="0" class="content_table1">
+                <thead>
+                <tr>
+                    <th>公司部门</th>
+                    <th>总人数</th>
+                    <th>部门总体工作总结</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--<tr>
+                    <td>商务开发</td>
+                    <td>
+                        <input class="sum" type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>解决方案</td>
+                    <td>
+                        <input class="sum" type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>技术研发及实施</td>
+                    <td>
+                        <input class="sum" type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>后台行政</td>
+                    <td>
+                        <input class="sum" type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>其他</td>
+                    <td>
+                        <input class="sum" type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>总数</td>
+                    <td class="sumTotall">
+                        0
+                    </td>
+                    <td>-&#45;&#45;&#45;&#45;&#45;&#45;</td>
+                </tr>-->
+                </tbody>
+            </table>
+
+            <div class="header">
+                <p>独立纵队大数据应用平台技术开发进度及质量反馈</p>
+            </div>
+            <table cellspacing="0" class="content_table2">
+                <thead>
+                <tr>
+                    <th>炸药包</th>
+                    <th>完成比例(%)</th>
+                    <th>负责人</th>
+                    <th>质量意见反馈</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--<tr>-->
+                    <!--<td>独立纵队介绍PPT+WORD</td>-->
+                    <!--<td>-->
+                        <!--<input type="text">-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<input type="text">-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<input type="text">-->
+                    <!--</td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+
+            <div class="header">
+                <p>客户拜访、签约、回款统计</p>
+            </div>
+            <table cellspacing="0" class="content_table3">
+                <colgroup>
+                    <col width="4%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>本周拜访数量</th>
+                    <th>本周签约客户数</th>
+                    <th>本周签署合同额（万元）</th>
+                    <th>年度实现合同额（万元）</th>
+                    <th>本周回款（万元）</th>
+                    <th>年度累计回款（万元）</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>总数</td>
+                    <td>
+                        <input disabled class="visitcount" maxlength="12" type="text">
+                    </td>
+                    <td>
+                        <input class="signcount" maxlength="12" type="text">
+                    </td>
+                    <td>
+                        <input class="contractmoney" maxlength="12" type="text">
+                    </td>
+                    <td>
+                        <input class="yearcontractmoney" maxlength="12" type="text">
+                    </td>
+                    <td>
+                        <input class="payback" maxlength="12" type="text">
+                    </td>
+                    <td>
+                        <input class="yearpayback" maxlength="12" type="text">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <div class="header">
+                <p>合资公司客户拜访清单</p>
+            </div>
+            <table class="content_table4">
+                <colgroup>
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="9%">
+                    <col width="18%">
+                    <col width="3%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>客户名称</th>
+                    <th>商机名称</th>
+                    <th>所在省市</th>
+                    <th>合资公司陪同人员</th>
+                    <th>签约概率</th>
+                    <th>商机跟踪进度，如何推动签约</th>
+                    <th >
+                        <i class="layui-icon icon opentcc" style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf;">&#xe654;</i>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="tbo4">
+
+                </tbody>
+            </table>
+
+
+            <div class="header">
+                <p>正在执行商机</p>
+            </div>
+            <table id="addBusingTable">
+                <colgroup>
+                    <col width="22%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="3%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>客户名称</th>
+                    <th>商机名称</th>
+                    <th>商机等级</th>
+                    <th>商机进度</th>
+                    <th >
+                        <i class="layui-icon icon addBusing" style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf;">&#xe654;</i>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--<tr>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="0">请选择</option>
+                            <option value="1">D类50%-59%（解决方案沟通、预算明确并且见过最高决策人）</option>
+                            <option value="2">333</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td class="layui-icon" style="font-size: 20px; color: #FF5722;border:1px solid #ccc;">&#xe640;</td>
+                </tr>-->
+                </tbody>
+            </table>
+
+            <div class="header">
+                <p>正在跟踪的商机机会分析（机会大于50%）</p>
+            </div>
+            <table class="content_table5">
+                <colgroup>
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="20%">
+                    <col width="15%">
+                    <col width="9%">
+                    <col width="23%">
+                    <col width="3%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>客户名称</th>
+                    <th>商机名称</th>
+                    <th>商机等级</th>
+                    <th>预计签约金额（万元）</th>
+                    <th>预计签约时间</th>
+                    <th>商机跟踪进度，如何推动签约</th>
+                    <th >
+                        <i class="layui-icon icon opentcc1" style="font-size: 20px; color: #1E9FFF;border:1px solid #bfcddf;">&#xe654;</i>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="tbo5">
+
+                </tbody>
+            </table>
+
+
+            <div class="header">
+                <p>与其他独立纵队/合资公司配合情况</p>
+            </div>
+            <textarea name="" id="cooperateinfo" cols="30" rows="10"></textarea>
+            <div class="header">
+                <p>管理方面的问题与建议</p>
+            </div>
+            <textarea name="" id="manageproblemadvice" cols="30" rows="10"></textarea>
+            <div class="header">
+                <p>市场方面的问题与新发现、新机遇</p>
+            </div>
+            <textarea name="" id="marketingproblem" cols="30" rows="10"></textarea>
+            <div class="header">
+                <p>需要总部支援的事项</p>
+            </div>
+            <textarea name="" id="supportdetails" cols="30" rows="10"></textarea>
+            <p class="footer">
+                <input type="button" value="保存" class="save">
+                <input type="button" value="发布" class="parent">
+            </p>
+        </div>
+    </div>
+</div>
+<div id="visitLog">
+    <!-- CRM终端table区 -->
+    <div class="wrap-table clearfix">
+        <div class="layui-form">
+            <table class="layui-table visitLogInfo">
+                <colgroup>
+                    <col width="3%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="10%">
+                    <!--<col width="10%">-->
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="25%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="layui-form-checkbox layui-unselect all" lay-skin="primary"><i class="layui-icon"></i></div>
+                    </th>
+                    <th>客户名称</th>
+                    <th>商机名称</th>
+                    <th>所在省市区</th>
+                    <!--<th>所在市</th>-->
+                    <th>合资公司陪同人员</th>
+                    <th>签约概率</th>
+                    <th>沟通内容</th>
+                </tr>
+                </thead>
+                <tbody class="all-control">
+                <tr>
+                    <td>
+                        <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i class="layui-icon"></i></div>
+                    </td>
+                    <td>2017-09-09</td>
+                    <td>阿利</td>
+                    <td>产品及技术中心-产品部</td>
+                    <td>已发布</td>
+                    <td>2017年9月11日</td>
+                    <td>
+                        <span>编辑</span>
+                        <span>删除</span>
+                    </td>
+                    <td>哈哈</td>
+                </tr>
+                </tbody>
+            </table>
+            <!--<div class="pager"></div>-->
+        </div>
+        <p class="footer">
+            <input type="button" value="取消" class="isNotSure">
+            <input type="button" value="确定" class="isSure">
+        </p>
+    </div>
+
+</div>
+
+<div id="busHalf">
+    <ul class="fillter clearfix">
+        <li>
+            <lable>客户名称：</lable><input class="cusName" type="text">
+        </li>
+        <li>
+            <lable>商机名称：</lable><input class="busName" type="text">
+        </li>
+        <li>
+            <lable>商机等级：</lable>
+            <select name="" id="" class="busLevel">
+                <!--<option value="">1</option>-->
+                <!--<option value="">2</option>-->
+                <!--<option value="">3</option>-->
+                <!--<option value="">4</option>-->
+                <!--<option value="">5</option>-->
+                <!--<option value="">6</option>-->
+                <!--<option value="">7</option>-->
+            </select>
+        </li>
+        <li>
+            <span class="refer">查询</span>
+        </li>
+    </ul>
+    <div class="wrap-table clearfix">
+        <h3>本人及下属商机：</h3>
+        <div class="layui-form">
+            <table class="layui-table busHalfTab">
+                <colgroup>
+                    <col width="5%">
+                    <col width="19%">
+                    <col width="19%">
+                    <col width="19%">
+                    <col width="19%">
+                    <col width="19%">
+                    <col width="19%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="layui-form-checkbox layui-unselect all1" lay-skin="primary"><i class="layui-icon"></i></div>
+                    </th>
+                    <th>客户名称</th>
+                    <th>商机名称</th>
+                    <th>商机等级</th>
+                    <th>预约签约金额（万元）</th>
+                    <th>预计签约时间</th>
+                </tr>
+                </thead>
+                <tbody class="all-control1">
+                <!--<tr>
+                    <td>
+                        <div class="layui-form-checkbox layui-unselect" lay-skin="primary"><i class="layui-icon"></i></div>
+                    </td>
+                    <td>2017-09-09</td>
+                    <td>阿利</td>
+                    <td>产品及技术中心-产品部</td>
+                    <td>已发布</td>
+                    <td>2017年9月11日</td>
+                </tr>-->
+                </tbody>
+            </table>
+            <div class="pager"></div>
+        </div>
+    </div>
+    <p class="footer" style="margin-top: 20px">
+        <input type="button" value="取消" class="isNotSure">
+        <input type="button" value="确定" class="agr">
+    </p>
+</div>
+</body>
+<script src="../../js/personalCenter/unionParttimeEdit.js"></script>
+</html>

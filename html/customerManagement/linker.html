@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>客户联系人</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/customerManagementLess/customerLinker.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="wrap">
+            <!-- CRM终端顶部 -->
+            <div class="wrap-top">
+                <ol class='fl'>
+                    <li class="nav-btn toNewLinker">新建联系人</li>
+                </ol>
+                <div class="fr">
+                    <div id="drop-down-box" class="drop-down-box fl" style="display: none;">
+                        <span name="1">我的联系人</span>
+                        <ul class="dropdown">
+                            <li name="1">我的联系人</li>
+                            <li name="2">下属联系人</li>
+                            <li name="3">全部联系人</li>
+                        </ul>
+                    </div>
+                    <div class='input-search fl' style="margin-right: 15px">
+                        <input type="text" id="searchname" placeholder="客户名称、联系人姓名、手机号">
+                        <i id="inp-search"></i>
+                    </div>
+                    <!--<div class="advanced-filter fl"></div>-->
+                </div>
+            </div>
+            <!-- CRM终端table区 -->
+            <div class="wrap-table clearfix">
+                <div class="layui-form">
+                    <table class="layui-table tab-linker">
+                        <!--<colgroup>-->
+                        <!--<col width="5%">-->
+                        <!--<col width="10%">-->
+                        <!--<col width="20%">-->
+                        <!--<col width="5%">-->
+                        <!--<col width="5%">-->
+                        <!--<col width="15%">-->
+                        <!--<col width="10%">-->
+                        <!--<col width="10%">-->
+                        <!--<col width="15%">-->
+                        <!--<col width="5%">-->
+                        <!--</colgroup>-->
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="all layui-form-checkbox layui-unselect" lay-skin="primary"><i
+                                    class="layui-icon"></i></div>
+                            </th>
+                            <th>联系人姓名</th>
+                            <th>客户名称</th>
+                            <th>职位</th>
+                            <th>级别</th>
+                            <th>来源类型</th>
+                            <th>手机号</th>
+                            <th>创建人</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="pager"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!--弹层-->
+<div id="filter1">
+    <span>来源类型:</span>
+    <select name="" id="srctype">
+        <option value="0">请选择</option>
+        <option value="1">自建</option>
+        <option value="2">转移</option>
+        <option value="3">共享</option>
+    </select>
+    <p class="footer">
+        <input type="button" value="重置" id="cancel1">
+        <input type="button" value="确定" id="ok1">
+    </p>
+</div>
+</body>
+<script src='../../js/customerManagement/linker.js'></script>
+</html>
+
+
+

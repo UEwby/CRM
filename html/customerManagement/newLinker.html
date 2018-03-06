@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>新增联系人</title>
+    <link rel="stylesheet" href="../../css/commonLess/commonNew.css">
+</head>
+
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script> <header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main clearfix'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="content_w">
+            <h2>新建联系人</h2>
+            <!--基本信息-->
+            <div class="mainbody">
+                <h3>
+                    <span>基本信息</span>
+                </h3>
+                <ul class="ul-newCustomer">
+                    <li class="clearfix">
+                        <span class="li-left">客户名称 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="customerid" hidden>
+                            <input type="text" id="customername">
+                            <ul class="ul-customerName"></ul>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">联系人姓名 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="linkmanname">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">部门 :</span>
+                        <div class="li-right  re">
+                            <input type="text" id="linkmandepartmnet">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">职位 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="linkmanposition">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">级别 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="linkmanlevel">
+                        </div>
+                    </li>
+                    <!--<li class="clearfix">
+                        <span class="li-left">联系人类别 :</span>
+                        <div class="li-right important">
+                            <select id="linkmantype">
+                                <option value="请选择">请选择</option>
+                                <option value="业务对接人">业务对接人</option>
+                                <option value="商机最高决策人">商机最高决策人</option>
+                                <option value="高层领导">高层领导</option>
+                            </select>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+            <!--客户联系人-->
+            <div class="mainbody">
+                <h3>
+                    <span>联系方式</span>
+                </h3>
+                <ul class="ul-customerLinker">
+                    <li class="clearfix">
+                        <span class="li-left">手机 :</span>
+                        <div class="li-right important">
+                            <input type="text" id="linkmanmobile">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">电话 :</span>
+                        <div class="li-right">
+                            <input type="text" id="linkmanphone">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">邮箱 :</span>
+                        <div class="li-right">
+                            <input type="email" id="linkmanemail">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">微信 :</span>
+                        <div class="li-right">
+                            <input type="text" id="linkmanwx">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">备注 :</span>
+                        <div class="li-right">
+                            <input type="text" id="linkmandesc">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--保存-->
+            <div class="footerSave">
+                <input type="button" value="取消" class="cancel">
+                <input type="button" value="保存" class="save">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/customerManagement/newLinker.js"></script>
+
+</html>

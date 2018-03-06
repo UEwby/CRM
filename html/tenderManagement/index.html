@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>招标管理</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/tenderManagementLess/pop.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="wrap">
+            <!-- CRM终端顶部 -->
+            <div class="wrap-top">
+                <ol class='fl'>
+                    <li class="nav-btn" id="uploadtender">上传招标信息</li>
+
+                </ol>
+                <div class="fr">
+                    <div class='input-search fl'>
+                        <input type="text" placeholder="招标名称、招标单位、负责人姓名">
+                        <i class=input-search></i>
+                    </div>
+                    <div class="advanced-filter fl"></div>
+                </div>
+            </div>
+            <!-- CRM终端table区 -->
+            <div class="wrap-table clearfix">
+                <div class="layui-form">
+                    <table class="layui-table">
+
+                        <thead>
+                        <tr>
+                            <th>招标名称</th>
+                            <th>招标单位</th>
+                            <th>招标状态</th>
+                            <th>所属地区</th>
+                            <th>发布日期</th>
+                            <th>截止日期</th>
+                            <th>网址</th>
+                            <th>负责人</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="pager" id='pager'></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="popFilter" class="pop">
+    <ul class="ul-popupFilter clearfix">
+        <li style="width: 34%;">
+            <div>
+                <label>招标状态 :</label>
+            </div>
+            <div>
+                <select style="width: 100px;" id="customertype">
+                    <option value="-1">请选择</option>
+                    <option value="0">新标</option>
+                    <option value="1">已参与未反馈</option>
+                    <option value="2">未参与未反馈</option>
+                    <option value="3">未参与已反馈</option>
+                    <option value="4">已参与已反馈</option>
+                </select>
+            </div>
+            <div style="clear: both;"></div>
+        </li>
+        <li style="width: 33%;">
+            <div>
+                <label>发布时间 :</label><input type="text" id="beginvisitdate">
+            </div>
+            <div style="clear: both;"></div>
+        </li>
+        <li style="width: 33%;">
+            <div>
+                <label>截止时间 :</label><input type="text" id="endvisitdate">
+            </div>
+            <div style="clear: both;"></div>
+        </li>
+        <li style="width: 100%;">
+            <div>
+                <label>所在地 :</label>
+            </div>
+            <div id="citys">
+                <select style="width: 185px;" id="s_province" class="prov" name="s_province"></select>
+                <select style="width: 185px;" id="s_city" class="city" name="s_city"></select>
+                <select style="width: 190px;" id="s_county" class="dist" name="s_county"></select>
+            </div>
+            <div style="clear: both;"></div>
+        </li>
+        <div style="clear: both;"></div>
+    </ul>
+    <p class="footer" style="margin: 20px auto;">
+        <input type="button" value="重置" id="cancel1">
+        <input type="button" value="确定" id="ok1">
+    </p>
+</div>
+<script src="../../js/tenderManagement/module.js"></script>
+<script src="../../js/common/city1.js"></script>
+<script src='../../js/tenderManagement/index.js'></script>
+</body>
+</html>
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>角色管理</title>
+    <link rel="stylesheet" href="../../resource/zTree_v3.5/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="con1 clearfix">
+            <ul>
+                <li>
+                    <button id="addrole">新建角色</button>
+                </li>
+                <li>
+                    <div class="box">
+                        <div>
+                            <label>角色名称 :</label>
+                        </div>
+                        <div>
+                            <input id="roleName" type="text" placeholder="请输入角色名称">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="cz">重置</button>
+                    <button class="sou" id="sourole">查询</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CRM终端table区 -->
+        <div class="wrap-table clearfix">
+            <div class="layui-form">
+                <table class="layui-table" id="roleLists">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>角色名称</th>
+                        <th>该角色人数</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pager"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script id="tempRoleList" type="text/html">
+    {{if total > 0}}
+    {{each rows}}
+        <tr data-isdel="{{$value.isdel}}" data-userId="{{$value.roleid}}" data-rolename="{{$value.rolename}}" data-roleid="{{$value.roleid}}">
+        <td>{{$index+1}}</td>
+        <td>{{$value.rolename}}</td>
+        <td>{{$value.num}}</td>
+        <td>{{$value.createtime}}</td>
+        <td>
+            {{if $value.issuper}}
+                不可编辑
+            {{else}}
+                <a class="nodec editrole">编辑</a>
+                <a class="nodec rolemenu">分配权限</a>
+                {{if $value.num == 0}}
+                    <a class="nodec del">删除</a>
+                {{/if}}
+            {{/if}}
+        </td>
+        </tr>
+    {{/each}}
+    {{else}}
+    <tr><td colspan="5">暂无数据</td></tr>
+    {{/if}}
+</script>
+<script type="text/javascript" src="../../resource/zTree_v3.5/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="../../resource/zTree_v3.5/js/jquery.ztree.excheck.js"></script>
+<script src="../../js/systemManagement/increaseRole.js"></script>
+</html>

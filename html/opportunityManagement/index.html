@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>商机</title>
+    <link rel="stylesheet" href="../../css/commonLess/commonComponent.css">
+    <link rel="stylesheet" href="../../css/opportunityManagementLess/index.css">
+</head>
+
+<body>
+    <!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script> <header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+    <div class='main'>
+        <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+        <div class="content clearfix">
+            <div class="wrap">
+                <!-- CRM终端顶部 -->
+                <div class="wrap-top">
+                    <ol class='fl'>
+                        <li class="nav-btn">新建商机</li>
+                        <li class="nav-btn">转移商机</li>
+                        <li class="nav-btn">共享商机</li>
+                        <li class="nav-btn combine" style="display:none;">合并商机</li>
+                        <li class="nav-btn">打印商机</li>
+                        <li class="nav-btn export">导出全部</li>
+                    </ol>
+                    <div class="fr">
+                        <div id="drop-down-box" class="drop-down-box fl">
+                            <span>我的商机</span>
+                            <ul class="dropdown">
+                                <li>我的商机</li>
+                                <li>下属商机</li>
+                                <li>全部商机</li>
+                            </ul>
+                        </div>
+                        <div class='input-search fl'>
+                            <input type="text" placeholder="商机名称、客户名称、负责人姓名">
+                            <i></i>
+                        </div>
+                        <div class="advanced-filter fl"></div>
+                    </div>
+                </div>
+                <!-- CRM终端table区 -->
+                <div class="wrap-table clearfix">
+                    <div class="layui-form">
+                        <table class="layui-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="layui-form-checkbox layui-unselect all" lay-skin="primary">
+                                            <i class="layui-icon"></i>
+                                        </div>
+                                    </th>
+                                    <th>商机名称</th>
+                                    <th>商机状态</th>
+                                    <th>客户名称</th>
+                                    <!-- <th>预算状态</th> -->
+                                    <th>预计合同金额</th>
+                                    <th>商机等级</th>
+                                    <th>来源类型</th>
+                                    <th>所属人</th>
+                                    <th>预计签约时间</th>
+                                    <th>审核状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="all-control">
+                            </tbody>
+                        </table>
+                        <div class="pager" id='pager'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 筛选弹窗 -->
+    <div id="div4" style="display: none;">
+        <ul class="clearfix">
+            <li>
+                <div>
+                    <label>商机类别：</label>
+                </div>
+                <div>
+                    <select class="businesstype">
+                        <option>请选择</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>来源类型：</label>
+                </div>
+                <div>
+                    <select class="srctype">
+                        <option>请选择</option>
+                        <option value="1">自建</option>
+                        <option value="2">转移</option>
+                        <option value="3">共享</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>商机等级：</label>
+                </div>
+                <div>
+                    <select class="projectlevel">
+                        <option>请选择</option>
+                        <option value="89">A类100%（已中标）</option>
+                        <option value="90">B类90%-99%（招投标前期）</option>
+                        <option value="91">C类60%-89%（方案优化、方案过会）</option>
+                        <option value="92">D类50%-59%（解决方案沟通、预算明确并且见过最高决策人）</option>
+                        <option value="93">E类30%-50%（需求明确并见过最高决策人）</option>
+                        <option value="94">F类29%以下（其他）</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>商机状态：</label>
+                </div>
+                <div>
+                    <select class="projectstate">
+                        <option>请选择</option>
+                        <option value="1">签署合同</option>
+                        <option value="2">已中标</option>
+                        <option value="3">招投标</option>
+                        <option value="4">招投标前期</option>
+                        <option value="5">编写解决方案</option>
+                        <option value="6">提供建设性方案</option>
+                        <option value="7">商机沟通</option>
+                        <option value="8">政府资金申请</option>
+                        <option value="9">联合办学</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>预算状态：</label>
+                </div>
+                <div>
+                    <select class="budgetstatus">
+                        <option>请选择</option>
+                        <option value="1">待申请</option>
+                        <option value="2">申请中（主导）</option>
+                        <option value="3">申请中（非主导）</option>
+                        <option value="4">已批复</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>审核状态：</label>
+                </div>
+                <div>
+                    <select class="decision">
+                        <option>请选择</option>
+                        <option value="1">待审核（主管）</option>
+                        <option value="2">审核通过（主管）</option>
+                        <option value="3">审核未通过（主管）</option>
+                        <option value="4">待审核（总裁）</option>
+                        <option value="5">审核通过（总裁）</option>
+                        <option value="6">审核未通过（总裁）</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>商机阶段：</label>
+                </div>
+                <div>
+                    <select class="isapproval">
+                        <option>请选择</option>
+                        <option value="0">未立项</option>
+                        <option value="2">已立项</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label>签约金额(预计)：</label>
+                    <input type="text" class="beginbudgetmoney"> -
+                    <input type="text" class="endbudgetmoney"> 万元
+                </div>
+            </li>
+            <!-- <li>
+                <div>
+                    <label>所在地 :</label>
+                </div>
+                <div>
+                    <select id="s_province" class="customerprovince">
+                    </select>
+                    <select id="s_city" class="customercity">
+                    </select>
+                    <select id="s_county" class="customerdistrict">
+                    </select>
+                </div>
+            </li> -->
+            <li>
+                <div>
+                    <label>跟进时间：</label>&nbsp;
+                    <input type="text" class="begincreatedate"> -
+                    <input type="text" class="endcreatedate">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 转移商机弹窗 -->
+    <div class="transfer clearfix">
+        <div class="fl clearfix top">
+            <span class="fl">转移给：</span>
+            <input type="text" placeholder="请输入姓名" class="fl transfer-share">
+            <div class="fr transfer-name">
+                <i class="del-icon"></i>
+                <span></span>
+            </div>
+        </div>
+        <ul class="content-name">
+        </ul>
+        <p class="tips">* 必须选择“转移人”才能进行“保存”</p>
+    </div>
+    <!--合并客户弹出层-->
+    <div id="merge" class="pop">
+        <div class="opportunities-1">
+            <h3>商机信息1</h3>
+            <span class="this-opportunities">该商机为主</span>
+        </div>
+        <div class="opportunities-2">
+            <h3>商机信息2</h3>
+            <span class="this-opportunities">该商机为主</span>
+        </div>
+        <form class="layui-form">
+            <div class="clearfix wrap-merge">
+                <div class="fl opportunities-1-con" style="width:50%">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                        </div>
+                    </div>
+                </div>
+                <div class="fr opportunities-2-con" style="width:50%">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block my-input-block">
+                        </div>
+                    </div>
+                </div>
+                <span class="d-line"></span>
+            </div>
+        </form>
+        <p class="footer2">
+            <span>* 必须选择"该商机为主"才能确定合并</span>
+        </p>
+    </div>
+</body>
+<!-- <script src="../../js/common/city.js"></script> -->
+<script src="../../js/opportunityManagement/module.js"></script>
+<script src="../../js/opportunityManagement/index.js"></script>
+
+</html>

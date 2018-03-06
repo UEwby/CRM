@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>客户详情</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonDetails.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="wrap">
+            <!-- 客户详情 -->
+            <div class="wrap-top">
+                <!-- 客户详情头部 -->
+                <div class="wrap-con">
+                    <div class="con-title">
+                        <h3 class="count-title">九次方格力大数据有限公司</h3>
+                        <p class='count-drop'>
+                            <!--<span class='created'>新建商机</span>-->
+                            <span class='edit'>编辑</span>
+                        </p>
+                    </div>
+                    <div class='count-info-open hide'><i class=''>展开</i></div>
+                    <ol class='count-info-stop'>
+                        <li><span class="tit">合资公司名称：</span><span class="con">九次方格力大数据有限公司</span></li>
+                        <li><span class="tit">状态：</span><span class="con">签订出资协议</span></li>
+                        <li><span class="tit">股东结构（拟）：</span><span class="con">5:5</span></li>
+                        <li><span class="tit">预计拿到执日期：</span><span class="con">2017-10-28</span></li>
+                        <li><span class="tit">董事&监事人员：</span><span class="con">张三丰</span></li>
+                        <li><span class="tit">跟进人：</span><span class="con">王五</span></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- 客户详情底部-选项卡 -->
+            <div class="wrap-bottom">
+                <div class="wrap-con">
+                    <div class="layui-tab">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">跟进记录</li>
+                            <li>系统资料</li>
+                            <li class='add'>新建</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <div class="item">
+                                    <div>
+                                        <span class='fl-con'>跟进人：</span>
+                                        <span class='fr-con'>托尼斯坦克<em>客户</em></span>
+                                    </div>
+                                    <div class='con-center'>
+                                        <p><span class='fl-con'>跟进时间：</span><span class='fr-con'>2017-09-14</span></p>
+                                        <p><span class='fl-con'>联系人：</span><span class='fr-con'>李老师</span></p>
+                                        <p><span class='fl-con'>拜访方式：</span><span class='fr-con'>线上</span></p>
+                                    </div>
+                                    <div>
+                                        <span class='fl-con'>内容：</span><span class='fr-con'>拜访效果很好，对方表示很有兴趣。</span>
+                                    </div>
+                                    <i class="delete">删除</i>
+                                </div>
+                                <div class="item">
+                                    <div>
+                                        <span class='fl-con'>跟进人：</span>
+                                        <span class='fr-con'>托尼斯坦克<em>客户</em></span>
+                                    </div>
+                                    <div class='con-center'>
+                                        <p><span class='fl-con'>跟进时间：</span><span class='fr-con'>2017-09-14</span></p>
+                                        <p><span class='fl-con'>联系人：</span><span class='fr-con'>李老师</span></p>
+                                        <p><span class='fl-con'>拜访方式：</span><span class='fr-con'>线上</span></p>
+                                    </div>
+                                    <div>
+                                        <span class='fl-con'>内容：</span><span class='fr-con'>拜访效果很好，对方表示很有兴趣。</span>
+                                    </div>
+                                    <i class="delete">删除</i>
+                                </div>
+                            </div>
+                            <div class="layui-tab-item">
+                                <ol class='count-info-stop'>
+                                    <li><span class="tit">创建人：</span><span class="con">李老师</span></li>
+                                    <li><span class="tit">创建时间：</span><span class="con">2017-09-15</span></li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jointVenture/module.js"></script>
+<script src='../../js/opportunityManagement/businessDetails.js'></script>
+</html>
+
+
+

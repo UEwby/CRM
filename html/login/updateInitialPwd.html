@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CRM修改默认密码</title>
+    <link rel="stylesheet" href="../../css/commonLess/reset.css">
+    <link rel="stylesheet" href="../../resource/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/commonLess/common.css">
+    <link rel="stylesheet" href="../../css/loginLess/updateInitialPwd.css">
+    <script src="../../js/common/jquery.js"></script>
+    <script src="../../js/common/common.js"></script>
+    <script src="../../resource/layui/layui.js"></script>
+</head>
+<body class="updateInitialPwd">
+<div class="open-ext">
+<div class="layui-form">
+    <div class="layui-form-item">
+        <h4 class="title">修改默认密码</h4>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新密码：</label>
+        <div class="layui-input-inline">
+            <input maxlength="16" type="password" id="userPwd" required  lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+        <span class="color-red">*</span>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">确认密码：</label>
+        <div class="layui-input-inline">
+            <input maxlength="16" type="password" id="conPwd" required  lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+        <span class="color-red">*</span>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn editpwd" lay-submit lay-filter="formDemo">保存</button>
+            <button type="reset" class="layui-btn layui-btn-primary close-ext">取消</button>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="../../js/login/updateInitialPwd.js"></script>
+</html>

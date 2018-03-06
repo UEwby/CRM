@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>客户关系管理系统</title>
+    <link rel="stylesheet" href="../../css/messageCenter/index.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content clearfix">
+        <div class="wrap clearfix">
+            <div class="wrap_left fl">
+                <div class="header">
+                    <p>我的消息</p>
+                </div>
+                <div class="msg_tab">
+                    <ul>
+                        <li class="notice">通知</li>
+                        <li class="active todolist">待处理事项</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrap_right fl">
+                <div class="tabs-item notice active">
+                    <div class="header">
+                        <p>通知</p>
+                        <div id="messagetypeid" class="select-box" style="width: 120px;" li-value="-1">
+                            <span class="text">全部</span>
+                            <ul class="dropdown">
+                                <li li-value="-1">全部</li>
+                                <li li-value="1">转移</li>
+                                <li li-value="2">共享</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="msg_tab_2"></div>
+                    <div class="pager"></div>
+                </div>
+                <div class="tabs-item todolist">
+                    <div class="header">
+                        <p>待处理事项</p>
+                        <div id="toDoListType" class="select-box" style="width: 120px;" li-value="0">
+                            <span class="text" li-value="0">全部</span>
+                            <ul class="dropdown">
+                                <li li-value="0">全部</li>
+                                <li li-value="1">商机</li>
+                                <li li-value="2">招标</li>
+                                <li li-value="3">日报</li>
+                                <li li-value="4">周报</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="msg_tab_1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/messageCenter/index.js"></script>
+</body>
+</html>

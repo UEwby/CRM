@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>新增跟进</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonNew.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main clearfix'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="content_w">
+            <h2>新增跟进</h2>
+            <!--基本信息-->
+            <div class="mainbody">
+                <h3><span>基本信息</span></h3>
+                <ul class="ul-follow">
+                    <li class="clearfix">
+                        <span class="li-left">客户名称 :</span>
+                        <div class="li-right re">
+                            <input type="text" id="customerid" disabled>
+                            <ul class="ul-customerName"></ul>
+                            <!--<span class="repeat">您输入的客户已存在,请<a href="">点击查看!</a></span>-->
+                        </div>
+                    </li>
+                    <li class="clearfix opportunity">
+                        <span class="li-left">商机名称 :</span>
+                        <div class="li-right">
+                            <input type="text" id="projectid" disabled>
+                            <!--<select id="projectid" class="sel" disabled>-->
+                                <!--<option value="0">请选择</option>-->
+                            <!--</select>-->
+                        </div>
+                    </li>
+                    <!--<li class="clearfix">-->
+                        <!--<span class="li-left">拜访类别 :</span>-->
+                        <!--<div class="li-right important">-->
+                            <!--<select id="visitsort" class="sel">-->
+                                <!--<option value="0">请选择</option>-->
+                                <!--<option value="日常拜访">日常拜访</option>-->
+                                <!--<option value="业务对接人拜访">业务对接人拜访</option>-->
+                                <!--<option value="商机最高决策人拜访">商机最高决策人拜访</option>-->
+                                <!--<option value="高层领导拜访">高层领导拜访</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <li class="clearfix">
+                        <span class="li-left">联系人 :</span>
+                        <div class="li-right important">
+                            <select id="crmcustomerlinkmanlist" class="sel">
+                                <option value="0">请选择</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">拜访方式 :</span>
+                        <div class="li-right important">
+                            <select id="visittype" class="sel">
+                                <option value="0">请选择</option>
+                                <option value="13">线上</option>
+                                <option value="14">见面</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">随访人员 :</span>
+                        <div class="li-right">
+                            <input type="text" id="customermanagerids">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">拜访时间 :</span>
+                        <div class="li-right important">
+                            <input type="text" id="visitdate">
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <span class="li-left">拜访目的 :</span>
+                        <div class="li-right important">
+                            <textarea type="text" class="txt" id="visittarget"></textarea>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">拜访效果 :</span>
+                        <div class="li-right important">
+                            <textarea type="text" class="txt" id="visitcontent"></textarea>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">下一步计划 :</span>
+                        <div class="li-right important">
+                            <textarea type="text" class="txt" id="nextvisitplan"></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--保存-->
+            <div class="footerSave">
+                <input type="button" value="取消" class="cancel1 save">
+                <input type="button" value="保存" class="save1 save">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/followRecords/followUpRecord.js"></script>
+</html>

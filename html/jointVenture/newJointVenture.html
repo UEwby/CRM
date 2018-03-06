@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ws">
+    <title>新增客户联系人</title>
+
+    <link rel="stylesheet" href="../../css/commonLess/commonNew.css">
+</head>
+<body>
+<!--CSS公共类管理-->
+<link rel="stylesheet" href="../../css/commonLess/reset.css">
+<!-- reset样式 -->
+<link rel="stylesheet" href="../../resource/layui/css/layui.css">
+<!--layui css-->
+<link rel="stylesheet" href="../../css/commonLess/common.css">
+<!-- 公共样式 -->
+
+
+<!--JS公共类管理-->
+<script src="../../js/common/jquery.js"></script>
+<!--JQ-->
+<script src="../../resource/layui/layui.js"></script>
+<!--layui js-->
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/loadMenu.js"></script>
+<!--加载左侧栏目-->
+<script src="../../resource/template.js"></script>
+<header>
+	<div class="logo"></div>
+    <ul class="topUlL"></ul>
+    <!--右侧个人消息-->
+    <ul class="topUlR">
+        <li class="setpw"><a href="javascript:"></a></li>
+        <li class="msgs" name="0"><a href="../messageCenter/index.html"></a></li>
+        <li class="loginout"><a href="javascript:"></a></li>
+    </ul>
+</header>
+<div class='main clearfix'>
+    <div class="bar clearfix">
+    <ul id="barRole">
+
+    </ul>
+</div>
+    <div class="content">
+        <div class="content_w">
+            <h2>新增合资公司</h2>
+            <!--基本信息-->
+            <div class="mainbody">
+                <h3><span>基本信息</span></h3>
+                <ul class="ul-newCustomer">
+                    <li class="clearfix">
+                        <span class="li-left">客户名称 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="customername">
+                            <ul class="ul-customerName"></ul>
+                            <span class="repeat" style="color: red"></span>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <span class="li-left">合资公司名称（拟） :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="coentreprisename">
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <span class="li-left">董事&监理人员 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="coentreprisemanger">
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <span class="li-left">状态 :</span>
+                        <div class="li-right important">
+                            <select id="customertype">
+                                <option>请选择</option>
+                                <!--<span><img src="../../img/xiala.png"> </span>-->
+                            </select>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="li-left">股东结构（拟） :</span>
+                        <div class="li-right"><input type="text" id="coentrepriseholders"><span>股东结构输入示例：“ 5 : 5 ”</span></div>
+
+                    </li>
+
+                    <li class="clearfix">
+                        <span class="li-left">预计拿到执照日期 :</span>
+                        <div class="li-right important re">
+                            <input type="text" id="expectgetlicensedate">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--保存-->
+            <div class="footerSave">
+                <input type="button" value="保存" class="save">
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/jointVenture/module.js"></script>
+</html>
+
+
+
